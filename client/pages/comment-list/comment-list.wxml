@@ -1,0 +1,43 @@
+<!--pages/comment-list/comment-list.wxml-->
+<empty-tips-card wx:if="{{commentList.length === 0}}
+      tips-title="还没有影评" 
+      tips-content="快去尝试添加影评吧～"></empty-tips-card>
+<view wx:else class="comment-list">
+  <view class="comment-wrapper" wx:for="{{commentList}}" wx:key="id" wx:for-item="comment" bindtap="toDetail" data-comment="{{comment}}">
+    <image class="avator" src="{{comment.avatar}}"></image>
+    <view class="comment-info">
+      <view class="user">{{comment.username}}</view>
+      <rating score="{{comment.rating}}" size="sm" disabled="true"></rating>
+      <view class="content">
+        <view class="text-content" wx:if="{{comment.commentType===0 }}">{{comment.content}}</view>
+      
+        <view class="voice-content" wx:if="{{comment.commentType===1 }}">
+          <audio-player audio="{{comment.content}}" bind:tapplayer="tapPlayer"></audio-player>
+        </view>
+      </view>
+      <view class="date">{{comment.createTime}}</view>
+    </view>
+    
+    <view class="actions">
+      <!-- 点赞 -->
+      <view class="action-wrapper" catchtap="toggleLike" data-comment="{{comment}}">
+        <view class="like-icon">
+          <image class="like {{isLikeList[comment.id] ? 'active' : ''}}" mode="aspectFill" src="../../images/like-animation.png"></image>
+        </view>
+        <view class="like-text {{isLikeList[comment.id] ? 'active' : ''}}">{{comment.likeCount}}</view>
+      </view>
+      <!-- 收藏 -->
+      <view class="action-wrapper" catchtap="toggleFave" data-comment="{{comment}}">
+        <view class="fave-icon">
+          <image class="fave {{isFaveList[comment.id] ? 'active' : ''}}" mode="aspectFill" src="../../images/fave-animation.png"></image>
+        </view>
+        <view class="fave-text {{isFaveList[comment.id] ? 'active' : ''}}">收藏</view>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+<button wx:if="{{!userInfo}}" class="wx-login wx-green"  open-type="getUserInfo" bindgetuserinfo="onTapLogin">
+  微信登录
+</button>

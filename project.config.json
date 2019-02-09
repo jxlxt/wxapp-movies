@@ -1,0 +1,71 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx0895c2b6e5aea83c",
+	"projectname": "wmp-movie",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "movie-detail",
+					"pathName": "pages/movie-detail/movie-detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "comment-list",
+					"pathName": "pages/comment-list/comment-list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "comment-add",
+					"pathName": "pages/comment-add/comment-add",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "preview",
+					"pathName": "pages/comment-preview/comment-preview",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "comment-detail",
+					"pathName": "pages/comment-detail/comment-detail",
+					"query": ""
+				}
+			]
+		}
+	}
+}

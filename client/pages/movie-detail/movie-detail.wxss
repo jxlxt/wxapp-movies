@@ -1,0 +1,61 @@
+/* pages/movie-detail/movie-detail.wxss */
+movie-container {
+  margin-bottom: 100rpx;
+}
+.movie-rating {
+  margin: 32rpx; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-info {
+  margin-right: 32rpx;
+}
+
+.rating-tips {
+  font-size: 30rpx;
+}
+
+.rating-score {
+  font-size: 50rpx;
+}
+
+.rating-count {
+  font-size: 25rpx;
+  line-height: 35rpx;
+  color: grey;
+}
+
+.rating-detail {
+  flex: 1 0 auto;
+  font-size: 20rpx;
+  line-height: 35rpx;
+
+}
+
+.bar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bar-tips {
+  width: 40rpx;
+  text-align: right;
+}
+
+.bar {
+  display: inline-block;
+  max-width: 150rpx;
+  height: 15rpx;
+  margin: 0 16rpx;
+  background: orange;
+}
+.movie-description {
+  margin: 32rpx 0;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: start;
+  color: #637782;
+}

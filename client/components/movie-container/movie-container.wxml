@@ -1,0 +1,11 @@
+<!--components/movie-container/movie-container.wxml-->
+<view class="wrapper">
+  <view class="content">
+    <image class="movie-image" mode="aspectFill" src="{{movie.image}}"></image>
+    <view class="movie-title">{{movie.title}}</view>
+    <slot name="content"></slot>
+  </view>
+  <view class="action-buttons">
+    <slot name="actions" class="action-buttons"></slot>
+  </view>
+</view>

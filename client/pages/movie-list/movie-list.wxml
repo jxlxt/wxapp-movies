@@ -1,0 +1,20 @@
+<!--pages/movie-list/movie-list.wxml-->
+<image class="bg" mode="aspcetFill" src="../../images/bg.png"></image>
+<view class="search-box">
+  <input class="search-box-input" placeholder="搜索电影..." bindinput="searchMovie"/>
+  <image class="search-box-icon" src="../../images/search.png" mode="aspectFill"></image>
+</view>
+  <view class="movie-list">
+      <navigator class="movie-item" wx:for="{{filteredMovieList}}" wx:key="id" wx:for-item="movie" url="/pages/movie-detail/movie-detail?id={{movie.id}}">
+      <image class="movie-image"  mode="aspectFill" src="{{movie.image}}"></image>
+        <view class="movie-info">
+          <view class="movie-title">{{movie.title}}</view>
+          <view class="movie-category">类型: {{movie.category}}</view>
+          <view class="movie-rating">
+          <rating score="{{movie.avgRating}}" size="sm"></rating>
+          <view class="score">{{movie.avgRating}}</view>
+          </view>
+          
+        </view>
+      </navigator>
+  </view>

@@ -1,0 +1,21 @@
+/**app.wxss**/
+page {
+  background-color: #eee;
+}
+
+empty-tips-card {
+  margin: 37rpx 27rpx;
+}
+
+.wx-green {
+  background-color: #1cb977;
+}
+
+.wx-login {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  color: white;
+}

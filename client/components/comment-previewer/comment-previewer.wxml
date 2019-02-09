@@ -1,0 +1,25 @@
+<!--components/comment-previewer/comment-previewer.wxml-->
+<!-- 评论预览区域 -->
+<view class="comment-info">
+  <!-- 用户信息 -->
+  <view class="comment-rating">
+    <rating score="{{rating}}" disabled="true"></rating>
+  </view>
+
+  <view class="comment-user">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view>{{userInfo.nickName}}的影评</view>
+  </view>
+  <!-- 评论内容 -->
+  <view class="comment-content">
+    <view class="quote">“</view>
+    <!-- 文字评论 -->
+    <block wx:if="{{commentType === 0}}">
+      <view class="text-content">{{content}}</view>
+    </block>
+    <!-- 语音评论 -->
+    <block wx:if="{{commentType === 1}}">
+      <audio-player wx:if="{{content}}" audio="{{content}}"></audio-player>
+    </block>
+  </view>
+</view>

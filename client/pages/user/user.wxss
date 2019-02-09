@@ -1,0 +1,46 @@
+/* pages/user/user.wxss */
+.tab-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 32rpx 0;
+  
+}
+
+.tab-item {
+  font-size: 35rpx;
+  line-height: 49rpx;
+  color: darkgray;
+}
+
+.tab-item.active {
+  color: orange;
+}
+
+comment-card {
+  width: 680rpx;
+  margin: 32rpx auto;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.card-actions button {
+  margin: 10rpx;
+  height: 50rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+}
+
+button.delete {
+  width: 150rpx;
+  color: red;
+}
+
+button.fave {
+  width: 200rpx;
+  color: orange;
+}
+
+
+
